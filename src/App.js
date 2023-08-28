@@ -1,15 +1,18 @@
 import './App.css';
 import {useState} from "react";
+import CityName from "./CityName";
 
 function App() {
     const [name, setName] = useState('');
+
+    const [updated, setUpdated] = useState(name);
 
     const changeName = (event) => {
         setName(event.target.value);
     }
 
-    const showName = () => {
-        console.log(name);
+    const handleClick = () => {
+        setUpdated(name);
     }
 
   return (
@@ -23,7 +26,8 @@ function App() {
                 type="text"
                 onChange={changeName}
             /><br/>
-            <button onClick={showName}>Show information</button>
+            <button onClick={handleClick}>Show information</button>
+            <CityName name={updated}/>
         </div>
     </div>
   );
