@@ -12,7 +12,17 @@ function App() {
     }
 
     const handleClick = () => {
-        setUpdated(name);
+        const nameInLowerCase = name.toLowerCase();
+
+        if (nameInLowerCase === 'kyiv') {
+            setUpdated(name);
+        }
+        else if (nameInLowerCase === 'lviv') {
+            setUpdated(name);
+        }
+        else {
+            setUpdated('City name is not found');
+        }
     }
 
   return (
