@@ -1,28 +1,23 @@
 import './App.css';
 import {useState} from "react";
-import CityName from "./CityName";
+import City from "./City";
+import cityData from "./cities.json";
 
 function App() {
     const [name, setName] = useState('');
 
     const [updated, setUpdated] = useState(name);
 
+    const [display, setDisplay] = useState(false);
+
+
     const changeName = (event) => {
         setName(event.target.value);
     }
 
     const handleClick = () => {
-        const nameInLowerCase = name.toLowerCase();
-
-        if (nameInLowerCase === 'kyiv') {
-            setUpdated(name);
-        }
-        else if (nameInLowerCase === 'lviv') {
-            setUpdated(name);
-        }
-        else {
-            setUpdated('City name is not found');
-        }
+        setUpdated(name.toLowerCase());
+        setDisplay(true);
     }
 
   return (
@@ -37,7 +32,7 @@ function App() {
                 onChange={changeName}
             /><br/>
             <button onClick={handleClick}>Show information</button>
-            <CityName name={updated}/>
+            {display && <City nameCity={updated} cityData={cityData}/>}
         </div>
     </div>
   );
