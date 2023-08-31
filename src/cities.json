@@ -2,18 +2,21 @@
   "kyiv":
   {
     "name": "Kyiv",
+    "img": "/images/kyiv.png",
     "description": "Kyiv is the capital of Ukraine",
     "population": 2884000
   },
   "lviv":
   {
     "name": "Lviv",
+    "img": "/images/lviv.jpg",
     "description": "Lviv is the city in western Ukraine",
     "population": 721301
   },
   "odesa":
   {
     "name": "Odesa",
+    "img": "/images/odesa.jpg",
     "description": "Odesa is a port city on the Black Sea in southern Ukraine",
     "population": 993120
   }
