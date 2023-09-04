@@ -22,16 +22,20 @@ function App() {
 
   return (
     <div className="App">
-      <header>
+      <header className="Header">
         <h1>Ukrainian Cities</h1>
       </header>
-        <div>
-            Enter city name:<br/>
-            <input
-                type="text"
-                onChange={changeName}
-            /><br/>
-            <button onClick={handleClick}>Show information</button>
+        <div className="Container">
+            <div className="Input">
+                <input
+                    type="text"
+                    onChange={changeName}
+                    placeholder="Enter city name"
+                /><br/>
+            </div>
+            <div className="Show">
+                <button onClick={handleClick}>Show information</button>
+            </div>
             {display && <City nameCity={updated} cityData={cityData}/>}
         </div>
     </div>

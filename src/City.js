@@ -5,13 +5,13 @@ function City({nameCity, cityData}){
         <div>
             {cityData[nameCity] ? (
                     <div>
-                        <p>{cityData[nameCity].name}</p>
+                        <h3>{cityData[nameCity].name}</h3>
                         <img src={cityData[nameCity].img} alt="City image" className="Image"/>
-                        <p>Description: {cityData[nameCity].description}</p>
-                        <p>Population: {cityData[nameCity].population}</p>
+                        <p><b>Description</b>: {cityData[nameCity].description}</p>
+                        <p><b>Population</b>: {cityData[nameCity].population}</p>
                     </div>
                 ) :
-                <p>City not found</p>}
+                <h3>City not found</h3>}
         </div>
     )
 }
